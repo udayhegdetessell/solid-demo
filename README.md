@@ -8,9 +8,7 @@ A comprehensive Spring Boot application demonstrating the SOLID principles of ob
 - [SOLID Principles](#solid-principles)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-- [Examples](#examples)
-- [Contributing](#contributing)
+- [Implementation Checklist](#Implementation Checklist)
 
 ## Overview
 
@@ -96,6 +94,37 @@ src/main/java/com/example/solid_demo/
 - Java 21 or higher
 - Gradle 8.x (or use the included wrapper)
 
+## Implementation Checklist
+
+#### **Single Responsibility Principle (SRP)**
+-  Each class has only one reason to change
+-  Classes have focused, well-defined purposes
+-  Separate data access, business logic, and presentation
+-  Use separate services for different concerns (validation, notification, etc.)
+
+#### **Open/Closed Principle (OCP)**
+-  Use interfaces and abstract classes for extensibility
+-  Implement Strategy pattern for varying algorithms
+-  Use dependency injection for swappable implementations
+-  Avoid modifying existing code when adding new features
+
+#### **Liskov Substitution Principle (LSP)**
+-  Ensure subclasses can replace parent classes without breaking functionality
+-  Maintain consistent behavior contracts
+-  Don't strengthen preconditions or weaken postconditions in subclasses
+-  Use composition over inheritance when LSP would be violated
+
+#### **Interface Segregation Principle (ISP)**
+-  Create focused, client-specific interfaces
+-  Avoid forcing implementations to depend on unused methods
+-  Group related methods logically
+-  Use multiple small interfaces instead of large ones
+
+#### **Dependency Inversion Principle (DIP)**
+-  Depend on abstractions (interfaces/abstract classes)
+-  Use dependency injection
+-  High-level modules should not depend on low-level modules
+-  Create abstractions that don't depend on details
 
 ## Additional Resources
 

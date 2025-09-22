@@ -5,5 +5,6 @@ package com.example.solid_demo.solid.isp.better;
  */
 // Segregated interfaces
 public interface Worker {
+
     void work();
 }

@@ -44,6 +44,6 @@ public class HumanWorker implements WorkerOperations {
 
   @Override
     public void deployApplication() {
-        throw new UnsupportedOperationException("Junior developer can't deploy!");
+        throw new UnsupportedOperationException("HumanWorker can't deploy!");
     }
 }

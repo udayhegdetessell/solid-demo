@@ -5,41 +5,42 @@ import com.example.solid_demo.solid.isp.better.MeetingAttendee;
 import com.example.solid_demo.solid.isp.better.Programmer;
 import com.example.solid_demo.solid.isp.better.Sleeper;
 import com.example.solid_demo.solid.isp.better.Worker;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author udayhegde
  */
 // Junior developer implements basic interfaces
+  @Slf4j
 public class JuniorDeveloper implements Worker, Eater, Sleeper, Programmer, MeetingAttendee {
     
     @Override
     public void work() {
-        System.out.println("Junior developer working hard...");
+        log.info("Junior developer working.....");
     }
     
     @Override
     public void eat() {
-        System.out.println("Taking lunch break...");
+        log.info("Taking lunch break...");
     }
     
     @Override
     public void sleep() {
-        System.out.println("Getting rest for tomorrow...");
+        log.info("Getting rest for tomorrow...");
     }
     
     @Override
     public void program() {
-        System.out.println("Writing code with supervision...");
+        log.info("Writing code with supervision...");
     }
     
     @Override
     public void testCode() {
-        System.out.println("Running unit tests...");
+        log.info("Running unit tests...");
     }
     
     @Override
     public void attendMeetings() {
-        System.out.println("Learning in meetings...");
+        log.info("Learning in meetings...");
     }
-    // Notice: No deployApplication() - junior can't deploy
 }

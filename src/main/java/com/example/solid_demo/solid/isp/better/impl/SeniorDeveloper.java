@@ -7,51 +7,53 @@ import com.example.solid_demo.solid.isp.better.MeetingAttendee;
 import com.example.solid_demo.solid.isp.better.Programmer;
 import com.example.solid_demo.solid.isp.better.Sleeper;
 import com.example.solid_demo.solid.isp.better.Worker;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author udayhegde
  */
 // Senior developer implements all relevant interfaces
+  @Slf4j
 public class SeniorDeveloper implements Worker, Eater, Sleeper, Programmer,
     Deployer, MeetingAttendee, DocumentationWriter {
     
     @Override
     public void work() {
-        System.out.println("Senior developer architecting solutions...");
+        log.info("Senior developer architecting solutions...");
     }
     
     @Override
     public void eat() {
-        System.out.println("Quick coffee break...");
+        log.info("Quick coffee break...");
     }
     
     @Override
     public void sleep() {
-        System.out.println("Rest after code review...");
+        log.info("Rest after code review...");
     }
     
     @Override
     public void program() {
-        System.out.println("Writing scalable, maintainable code...");
+        log.info("Writing scalable, maintainable code...");
     }
     
     @Override
     public void testCode() {
-        System.out.println("Writing comprehensive test suites...");
+        log.info("Writing comprehensive test suites...");
     }
     
     @Override
     public void deployApplication() {
-        System.out.println("Deploying with proper CI/CD pipeline...");
+        log.info("Deploying with proper CI/CD pipeline...");
     }
     
     @Override
     public void attendMeetings() {
-        System.out.println("Leading technical discussions...");
+        log.info("Leading technical discussions...");
     }
     
     @Override
     public void writeDocumentation() {
-        System.out.println("Creating technical documentation...");
+        log.info("Creating technical documentation...");
     }
 }

@@ -3,6 +3,7 @@ package com.example.solid_demo.solid.lsp.better.service.impl;
 import com.example.solid_demo.solid.lsp.better.Shape;
 import com.example.solid_demo.solid.lsp.better.service.ShapeCalculatorService;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
  */
 // Service that works correctly with LSP
 @Service
+@Slf4j
 public class ShapeCalculatorServiceImpl implements ShapeCalculatorService {
 
     @Override
@@ -21,7 +23,7 @@ public class ShapeCalculatorServiceImpl implements ShapeCalculatorService {
     @Override
     public void processShapes(List<Shape> shapes) {
         for (Shape shape : shapes) {
-            System.out.println(shape.getShapeType() + " area: " + shape.getArea());
+           log.info(shape.getShapeType() + " area: " + shape.getArea());
             // This works correctly for all Shape implementations
         }
     }
