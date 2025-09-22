@@ -12,17 +12,17 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class AreaCalculatorService {
-    
-    public void demonstrateProblem() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setWidth(5);
-        rectangle.setHeight(10);
-        log.info("Area: {}", rectangle.getArea()); // 50
-        
-        // This breaks LSP
-        Rectangle square = new Square();
-        square.setWidth(5);
-        square.setHeight(10); // This changes width too!
-      log.info("Area: {}", square.getArea()); // 100, not expected!
-    }
+
+  public void demonstrateProblem() {
+    Rectangle rectangle = new Rectangle();
+    rectangle.setWidth(5);
+    rectangle.setHeight(10);
+    log.info("Area: {}", rectangle.getArea()); // 50
+
+    // This breaks LSP
+    Rectangle square = new Square();
+    square.setWidth(5);
+    square.setHeight(10); // This changes width too!
+    log.info("Area: {}", square.getArea()); // 100, not expected!
+  }
 }
